@@ -1,0 +1,1096 @@
+/* ========================================
+   StudyMetrik - Main Styles
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    height: 72px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e8ecf2;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #596579;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #2463eb;
+}
+
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 8%;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #dce9ff 0,
+            transparent 30%
+        ),
+        #f7f9fc;
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.tagline {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 7px 15px;
+
+    border-radius: 30px;
+
+    background: #e8f0ff;
+    color: #2463eb;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #2463eb;
+}
+
+.description {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #657085;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+.primary-btn {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 12px;
+
+    background: #2463eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(36, 99, 235, 0.25);
+}
+
+
+/* ========================================
+   CALCULATOR SECTION
+======================================== */
+
+.calculator-section {
+    padding: 90px 8%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    color: #2463eb;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    letter-spacing: -1px;
+}
+
+.section-heading p:last-child {
+    color: #6c7688;
+}
+
+
+/* ========================================
+   CALCULATION OPTIONS
+======================================== */
+
+.calculation-options {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.calculation-card {
+    min-height: 210px;
+
+    padding: 28px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.calculation-card:hover {
+    border-color: #2463eb;
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(30, 60, 100, 0.10);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eef4ff;
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.calculation-card strong {
+    font-size: 18px;
+}
+
+.calculation-card small {
+    max-width: 180px;
+
+    color: #7b8596;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   DYNAMIC CALCULATOR AREA
+======================================== */
+
+#calculator-area {
+    max-width: 1000px;
+
+    min-height: 220px;
+
+    margin: 50px auto 0;
+
+    padding: 45px;
+
+    border-radius: 22px;
+
+    background: #f7f9fc;
+
+    border: 1px dashed #d5dce8;
+
+    color: #6c7688;
+}
+
+.empty-calculator {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+}
+
+.empty-calculator span {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.empty-calculator h3 {
+    color: #172033;
+
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+    padding: 100px 8%;
+
+    background: #f7f9fc;
+
+    text-align: center;
+}
+
+.about-content {
+    max-width: 750px;
+
+    margin: auto auto 60px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1px;
+}
+
+.about-content > p:last-child {
+    color: #657085;
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   ABOUT FEATURES
+======================================== */
+
+.about-features {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    padding: 35px 25px;
+
+    background: white;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 20px;
+}
+
+.feature span {
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+.feature p {
+    color: #7b8596;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 35px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #172033;
+
+    color: #c5ccda;
+
+    font-size: 14px;
+}
+
+footer strong {
+    color: white;
+
+    font-size: 18px;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .calculation-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .calculator-section {
+        padding: 70px 5%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: 65px;
+
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .calculation-options {
+        grid-template-columns: 1fr;
+    }
+
+    #calculator-area {
+        padding: 30px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+}
+/* ========================================
+   CALCULATOR CONTENT
+======================================== */
+
+.calculator-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+
+/* ========================================
+   CALCULATOR HEADER
+======================================== */
+
+.calculator-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.calculator-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf1ff;
+    border-radius: 16px;
+
+    font-size: 28px;
+}
+
+.calculator-header h3 {
+    margin: 0 0 5px;
+
+    font-size: 26px;
+    color: #172033;
+}
+
+.calculator-header p {
+    margin: 0;
+
+    color: #718096;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   SUBJECT ROW
+======================================== */
+
+.subject-row {
+    display: grid;
+
+    grid-template-columns: 1.7fr 0.8fr 1fr 42px;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 14px;
+
+    background: white;
+
+    border: 1px solid #e1e7f0;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(30, 60, 100, 0.05);
+
+    transition: 0.2s;
+}
+
+.subject-row:hover {
+    border-color: #b9ccf5;
+
+    box-shadow: 0 8px 25px rgba(30, 60, 100, 0.08);
+}
+
+
+/* ========================================
+   INPUT GROUP
+======================================== */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.input-group label {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #667085;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d9e0ea;
+
+    border-radius: 10px;
+
+    background: #f9fafc;
+
+    color: #172033;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2463eb;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.10);
+}
+
+.input-group input::placeholder {
+    color: #a0a9b8;
+}
+
+
+/* ========================================
+   REMOVE SUBJECT
+======================================== */
+
+.remove-subject {
+    align-self: end;
+
+    width: 42px;
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #fff1f1;
+
+    color: #e05252;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.remove-subject:hover {
+    background: #ffe0e0;
+
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CALCULATOR ACTIONS
+======================================== */
+
+.calculator-actions {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    gap: 15px;
+}
+
+
+/* Secondary Button */
+
+.secondary-btn {
+    padding: 13px 20px;
+
+    border: 1px solid #d8e0ec;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #2463eb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #f3f7ff;
+
+    border-color: #2463eb;
+}
+
+
+/* Primary Button */
+
+.calculate-btn {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2463eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(36, 99, 235, 0.25);
+}
+
+
+/* ========================================
+   RESULT CARD
+======================================== */
+
+.result-card {
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #edf4ff,
+        #f8fbff
+    );
+
+    border: 1px solid #cfe0ff;
+}
+
+.result-icon {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.result-label {
+    margin: 0 0 5px;
+
+    color: #6b7890;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.result-card h2 {
+    margin: 5px 0 25px;
+
+    font-size: 52px;
+
+    color: #2463eb;
+
+    line-height: 1;
+}
+
+.result-card h2 span {
+    font-size: 18px;
+
+    color: #718096;
+
+    font-weight: 500;
+}
+
+
+/* ========================================
+   RESULT DETAILS
+======================================== */
+
+.result-details {
+
+    max-width: 400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.result-details div {
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e1e7f0;
+}
+
+.result-details span {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #7b8596;
+
+    margin-bottom: 4px;
+}
+
+.result-details strong {
+
+    font-size: 18px;
+
+    color: #172033;
+}
+
+
+/* ========================================
+   ERROR / INFO MESSAGE
+======================================== */
+
+.calculator-message {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+}
+
+.calculator-message span {
+    font-size: 18px;
+}
+
+.calculator-message p {
+    margin: 0;
+}
+
+.calculator-message.error {
+
+    background: #fff5f5;
+
+    border: 1px solid #ffd4d4;
+
+    color: #c24141;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .subject-row {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 16px;
+    }
+
+    .subject-name {
+        grid-column: 1 / -1;
+    }
+
+    .remove-subject {
+        width: 100%;
+    }
+
+    .calculator-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .secondary-btn,
+    .calculate-btn {
+        width: 100%;
+    }
+
+    .calculator-header {
+        align-items: flex-start;
+    }
+
+    .calculator-header h3 {
+        font-size: 21px;
+    }
+
+    .result-card h2 {
+        font-size: 44px;
+    }
+}
+/* ========================================
+   FIELD INFO BUTTON
+======================================== */
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.info-btn {
+    width: 18px;
+    height: 18px;
+
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #b9c8e3;
+    border-radius: 50%;
+
+    background: #eef4ff;
+    color: #2463eb;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.info-btn:hover {
+    background: #2463eb;
+    color: white;
+
+    transform: scale(1.1);
+}
+
+
+/* ========================================
+   FIELD INFO POPUP
+======================================== */
+
+#field-info-box {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(420px, 90%);
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #dce4f2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(20, 40, 80, 0.18);
+
+    z-index: 9999;
+
+    animation: infoPopup 0.2s ease;
+}
+
+.field-info-content {
+    position: relative;
+
+    text-align: left;
+}
+
+.field-info-content h4 {
+    margin: 0 35px 10px 0;
+
+    color: #172033;
+
+    font-size: 20px;
+}
+
+.field-info-content p {
+    margin: 0;
+
+    color: #657085;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.field-info-close {
+    position: absolute;
+
+    top: -5px;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f4f9;
+
+    color: #596579;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.field-info-close:hover {
+    background: #ffe9e9;
+    color: #e05252;
+}
+
+
+@keyframes infoPopup {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+}

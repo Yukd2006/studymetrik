@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMetrik | Smart Academic Companion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+
+    <header>
+
+        <div class="logo">
+            StudyMetrik
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    🇮🇳 BUILT FOR INDIAN STUDENTS
+                </p>
+
+                <h1>
+                    Understand your grades.
+                    <span>Plan your progress.</span>
+                </h1>
+
+                <p class="description">
+                    Calculate your semester GPA, track your CGPA,
+                    understand your academic performance, and plan
+                    your target grades — all in one place.
+                </p>
+
+                <button class="primary-btn" onclick="startCalculator()">
+                    Start Calculating →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             CALCULATOR SECTION
+        ================================= -->
+
+        <section class="calculator-section" id="calculator">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    ACADEMIC CALCULATOR
+                </p>
+
+                <h2>
+                    What do you want to calculate?
+                </h2>
+
+                <p>
+                    Choose an option to get started.
+                </p>
+
+            </div>
+
+
+            <!-- CALCULATION TYPE -->
+
+            <div class="calculation-options">
+
+                <button
+                    class="calculation-card"
+                    onclick="selectCalculation('semester')">
+
+                    <span class="card-icon">📚</span>
+
+                    <strong>
+                        Semester GPA
+                    </strong>
+
+                    <small>
+                        Calculate GPA for a single semester
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="calculation-card"
+                    onclick="selectCalculation('cgpa')">
+
+                    <span class="card-icon">📊</span>
+
+                    <strong>
+                        Overall CGPA
+                    </strong>
+
+                    <small>
+                        Calculate your cumulative CGPA
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="calculation-card"
+                    onclick="selectCalculation('percentage')">
+
+                    <span class="card-icon">🔄</span>
+
+                    <strong>
+                        CGPA / Percentage
+                    </strong>
+
+                    <small>
+                        Convert using your institution's rule
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="calculation-card"
+                    onclick="selectCalculation('target')">
+
+                    <span class="card-icon">🎯</span>
+
+                    <strong>
+                        Target CGPA
+                    </strong>
+
+                    <small>
+                        Find the GPA needed to reach your goal
+                    </small>
+
+                </button>
+
+            </div>
+
+
+            <!-- ================================
+                 DYNAMIC CALCULATOR AREA
+            ================================= -->
+
+            <div id="calculator-area">
+
+                <div class="empty-calculator">
+
+                    <span>🧮</span>
+
+                    <h3>
+                        Your calculator will appear here
+                    </h3>
+
+                    <p>
+                        Select one of the options above to begin.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             ABOUT SECTION
+        ================================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT STUDYMETRIK
+                </p>
+
+                <h2>
+                    More than just a CGPA calculator.
+                </h2>
+
+                <p>
+                    StudyMetrik is designed to help students
+                    understand their academic performance,
+                    calculate grades easily, and plan their
+                    academic goals with confidence.
+                </p>
+
+            </div>
+
+
+            <div class="about-features">
+
+                <div class="feature">
+                    <span>🇮🇳</span>
+                    <h3>India Focused</h3>
+                    <p>
+                        Designed around the needs of
+                        college students.
+                    </p>
+                </div>
+
+
+                <div class="feature">
+                    <span>🎯</span>
+                    <h3>Goal Planning</h3>
+                    <p>
+                        Calculate what you need to
+                        achieve your target CGPA.
+                    </p>
+                </div>
+
+
+                <div class="feature">
+                    <span>📱</span>
+                    <h3>Student Friendly</h3>
+                    <p>
+                        Simple, clean and easy to use
+                        on desktop or mobile.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <div>
+            <strong>StudyMetrik</strong>
+
+            <p>
+                Your smart academic companion.
+            </p>
+        </div>
+
+
+        <div>
+            <p>
+                © 2026 StudyMetrik
+            </p>
+
+            <p>
+                Built for students, by Srajan Poojary.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
